@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        >
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipSpacingHorizontal="@dimen/chip_h_spacing"
+            app:singleLine="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_review"
+                app:chipIcon="@drawable/ic_action_review"
+                app:chipIconEnabled="true"
+                app:chipIconSize="@dimen/chip_icon_size"
+                app:chipIconVisible="true" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_quiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_quiz"
+                app:chipIcon="@drawable/ic_action_quiz"
+                app:chipIconEnabled="true"
+                app:chipIconSize="@dimen/chip_icon_size"
+                app:chipIconVisible="true" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_review_sheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_review_sheet"
+                app:chipIcon="@drawable/ic_action_review_sheet"
+                app:chipIconEnabled="true"
+                app:chipIconSize="@dimen/chip_icon_size"
+                app:chipIconVisible="true" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_new_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_new_card"
+                app:chipIcon="@drawable/ic_action_new_card"
+                app:chipIconEnabled="true"
+                app:chipIconSize="@dimen/chip_icon_size"
+                app:chipIconVisible="true" />
+
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+
+</FrameLayout>

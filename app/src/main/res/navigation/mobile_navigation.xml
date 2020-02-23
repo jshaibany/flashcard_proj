@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.jandpartners.flashcardspro.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_classesListFragment"
+            app:destination="@id/classesListFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/classesListFragment"
+        android:name="com.example.jandpartners.flashcardspro.ui.classes.ClassesListFragment"
+        android:label="@string/menu_class"
+        tools:layout="@layout/fragment_classes_list" >
+        <action
+            android:id="@+id/action_classesListFragment_to_newClassDialogFragment"
+            app:destination="@id/newClassDialogFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit" />
+        <action
+            android:id="@+id/action_classesListFragment_to_classSectionsListFragment"
+            app:destination="@id/classSectionsListFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+        <action
+            android:id="@+id/action_classesListFragment_to_maintainClassFragment"
+            app:destination="@id/maintainClassFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+    </fragment>
+    <dialog
+        android:id="@+id/newClassDialogFragment"
+        android:name="com.example.jandpartners.flashcardspro.ui.classes.NewClassDialogFragment"
+        android:label="dialog_fragment_new_class"
+        tools:layout="@layout/dialog_fragment_new_class" />
+    <fragment
+        android:id="@+id/classSectionsListFragment"
+        android:name="com.example.jandpartners.flashcardspro.ui.sections.ClassSectionsListFragment"
+        android:label="@string/menu_section"
+        tools:layout="@layout/fragment_class_sections_list" >
+        <argument
+            android:name="ID"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_classSectionsListFragment_to_newSectionDialgFragment"
+            app:destination="@id/newSectionDialgFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+        <action
+            android:id="@+id/action_classSectionsListFragment_to_deckSetControlFragment"
+            app:destination="@id/deckSetControlFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+        <action
+            android:id="@+id/action_classSectionsListFragment_to_maintainSectionFragment2"
+            app:destination="@id/maintainSectionFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+    </fragment>
+    <dialog
+        android:id="@+id/newSectionDialgFragment"
+        android:name="com.example.jandpartners.flashcardspro.ui.sections.NewSectionDialgFragment"
+        android:label="dialog_fragment_new_section"
+        tools:layout="@layout/dialog_fragment_new_section" >
+        <argument
+            android:name="classID"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/deckSetControlFragment"
+        android:name="com.example.jandpartners.flashcardspro.ui.decksets.DeckSetControlFragment"
+        android:label="@string/menu_deck"
+        tools:layout="@layout/fragment_deck_set_control" >
+        <argument android:name="CID"
+            app:argType="string" />
+        <argument
+            android:name="SID"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_deckSetControlFragment_to_maintainFlashCardFragment"
+            app:destination="@id/maintainFlashCardFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+        <action
+            android:id="@+id/action_deckSetControlFragment_to_flashcardsListFragment"
+            app:destination="@id/flashcardsListFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+        <action
+            android:id="@+id/action_deckSetControlFragment_to_selectParametersFragment"
+            app:destination="@id/selectParametersFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/maintainFlashCardFragment"
+        android:name="com.example.jandpartners.flashcardspro.ui.flashcards.maintainFlashCardFragment"
+        android:label="@string/menu_flashcard"
+        tools:layout="@layout/fragment_maintain_flash_card" >
+        <argument
+            android:name="FID"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="DID"
+            app:argType="string" />
+        <argument
+            android:name="SID"
+            app:argType="string" />
+        <argument
+            android:name="CID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/flashcardsListFragment"
+        android:name="com.example.jandpartners.flashcardspro.ui.flashcards.flashcardsListFragment"
+        android:label="@string/menu_flashcards"
+        tools:layout="@layout/fragment_flashcards_list" >
+        <argument
+            android:name="CID"
+            app:argType="string" />
+        <argument
+            android:name="SID"
+            app:argType="string" />
+        <argument
+            android:name="DID"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_flashcardsListFragment_to_maintainFlashCardFragment"
+            app:destination="@id/maintainFlashCardFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/selectParametersFragment"
+        android:name="com.example.jandpartners.flashcardspro.ui.action.selectParametersFragment"
+        android:label="@string/menu_select_params"
+        tools:layout="@layout/fragment_select_parameters" >
+        <argument
+            android:name="CID"
+            app:argType="string" />
+        <argument
+            android:name="SID"
+            app:argType="string" />
+        <argument
+            android:name="DID"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_selectParametersFragment_to_reviewFlashcardsFragment"
+            app:destination="@id/reviewFlashcardsFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+        <argument
+            android:name="paramType"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_selectParametersFragment_to_quizFlashcardsFragment"
+            app:destination="@id/quizFlashcardsFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/reviewFlashcardsFragment"
+        android:name="com.example.jandpartners.flashcardspro.ui.action.reviewFlashcardsFragment"
+        android:label="@string/menu_review"
+        tools:layout="@layout/fragment_review_flashcards" >
+        <argument
+            android:name="CID"
+            app:argType="string" />
+        <argument
+            android:name="SID"
+            app:argType="string" />
+        <argument
+            android:name="DID"
+            app:argType="string" />
+        <argument
+            android:name="paramCount"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="paramOption"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <action
+            android:id="@+id/action_reviewFlashcardsFragment_to_deckSetControlFragment"
+            app:destination="@id/deckSetControlFragment"
+            app:popUpTo="@+id/deckSetControlFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/quizFlashcardsFragment"
+        android:name="com.example.jandpartners.flashcardspro.ui.action.quizFlashcardsFragment"
+        android:label="@string/menu_quiz"
+        tools:layout="@layout/fragment_quiz_flashcards" >
+        <argument
+            android:name="CID"
+            app:argType="string" />
+        <argument
+            android:name="SID"
+            app:argType="string" />
+        <argument
+            android:name="DID"
+            app:argType="string" />
+        <argument
+            android:name="paramCount"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="paramOption"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <action
+            android:id="@+id/action_quizFlashcardsFragment_to_deckSetControlFragment"
+            app:destination="@id/deckSetControlFragment"
+            app:popUpTo="@+id/deckSetControlFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/maintainClassFragment"
+        android:name="com.example.jandpartners.flashcardspro.ui.classes.maintainClassFragment"
+        android:label="fragment_maintain_class"
+        tools:layout="@layout/fragment_maintain_class" />
+    <fragment
+        android:id="@+id/maintainSectionFragment"
+        android:name="com.example.jandpartners.flashcardspro.ui.sections.maintainSectionFragment"
+        android:label="fragment_maintain_section"
+        tools:layout="@layout/fragment_maintain_section" >
+        <argument
+            android:name="classID"
+            app:argType="string" />
+    </fragment>
+</navigation>

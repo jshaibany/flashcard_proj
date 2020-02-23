@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">فلاش كارد برو</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">فلاش كارد برو</string>
+    <string name="nav_header_subtitle">jalal.shaibany@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">الرئيسية</string>
+    <string name="menu_class">المواضيع الرئيسية</string>
+    <string name="menu_section">الأقسام</string>
+    <string name="menu_deck">مجموعة الكروت</string>
+    <string name="menu_flashcard">كرت تعليمي</string>
+    <string name="menu_flashcards">قائمة الكروت</string>
+    <string name="menu_select_params">تحديد خيارات</string>
+    <string name="menu_review">مراجعة</string>
+    <string name="menu_quiz">إختبار</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">الإعدادات</string>
+    <string name="menu_help">المساعدة</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="new_class">إضافة موضوع رئيسي</string>
+    <string name="class_name">الاسم</string>
+
+    <string name="new_section">إضافة قسم فرعي</string>
+    <string name="section_name">الاسم</string>
+
+    <string name="action_flashcards_list">قائمة الكروت التعليمية</string>
+    <string name="action_review">مراجعة</string>
+    <string name="action_quiz">إختبار</string>
+    <string name="action_review_sheet">تصدير</string>
+    <string name="action_new_card">إضافة</string>
+
+    <string name="option_param_hint">حدد الخيارات المناسبة ثم اضغط زر البدء</string>
+
+    <string name="option_10_cards">10 كروت</string>
+    <string name="option_20_cards">20 كرت</string>
+    <string name="option_40_cards">40 كرت</string>
+    <string name="option_80_cards">80 كرت</string>
+    <string name="option_100_cards">100 كرت</string>
+    <string name="option_all_cards">الكل</string>
+
+    <string name="option_by_sequence">بحسب الترتيب</string>
+    <string name="option_by_random">عشوائيا</string>
+    <string name="option_by_importance">من الأكثر أهمية للأقل</string>
+    <string name="option_by_hardness">من الأكثر صعوبة للأقل</string>
+
+    <string name="action_fc_new">كرت تعليمي جديد</string>
+    <string name="action_fc_edit">تعديل كرت تعليمي</string>
+    <string name="input_fc_term">المصطلح/العنوان</string>
+    <string name="input_fc_definition">التعريف</string>
+    <string name="input_fc_importance">درجة الأهمية</string>
+    <string name="input_fc_hardness">درجة الصعوبة</string>
+
+    <string name="snack_quiz_done">إنتهت أسئلة الإختبار</string>
+    <string name="snack_undo_delete">إلغاء عملية الحذف</string>
+    <string name="snack_cascade_delete">سيتم حذف العنوان و جميع الأقسام الموجودة داخله</string>
+
+    <string name="image_content_desc">Content Description</string>
+    <string name="card_content_desc">Card Content Description Card Content Description Card Content Description Card Content Description Card Content Description
+    Card Content Description Card Content Description Card Content Description Card Content Description Card Content Description Card Content Description</string>
+
+    <string name="action_yes">نعم</string>
+    <string name="action_no">لا</string>
+    <string name="action_ok">موافق</string>
+    <string name="action_save">حفظ</string>
+    <string name="action_cancel">إلغاء</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    >
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:chipSpacingHorizontal="@dimen/chip_h_spacing"
+        app:singleLine="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_flashcards_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_flashcards_list"
+            app:chipIcon="@drawable/ic_action_flashcards_list"
+            app:chipIconEnabled="true"
+            app:chipIconSize="@dimen/chip_icon_size"
+            app:chipIconVisible="true" />
+
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+</FrameLayout>

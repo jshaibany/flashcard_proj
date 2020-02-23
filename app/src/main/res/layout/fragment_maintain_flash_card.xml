@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.flashcards.maintainFlashCardFragment"
+    android:layout_gravity="center_vertical|center_horizontal"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_action_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/indicator_margin"
+                android:layout_marginRight="@dimen/indicator_margin"
+                android:layout_marginStart="@dimen/indicator_margin"
+                android:layout_marginEnd="@dimen/indicator_margin"
+                android:layout_marginTop="@dimen/dialog_title_height"
+                android:layout_marginBottom="@dimen/dialog_title_height"
+                android:textSize="@dimen/form_title_font_size" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_term"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_action_title"
+                android:hint="@string/input_fc_term"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_term"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="5"
+                    android:maxLength="100"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_def"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_term"
+                android:hint="@string/input_fc_definition"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_def"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="12"
+                    android:maxLength="300"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tv_importance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_def"
+                android:layout_marginLeft="@dimen/indicator_margin"
+                android:layout_marginRight="@dimen/indicator_margin"
+                android:layout_marginStart="@dimen/indicator_margin"
+                android:layout_marginEnd="@dimen/indicator_margin"
+                android:layout_marginTop="@dimen/indicator_margin"
+                android:text="@string/input_fc_importance" />
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/seekbar_importance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_importance"
+                android:layout_marginLeft="@dimen/indicator_margin"
+                android:layout_marginRight="@dimen/indicator_margin"
+                android:layout_marginStart="@dimen/indicator_margin"
+                android:layout_marginEnd="@dimen/indicator_margin"
+                android:layout_marginTop="@dimen/indicator_margin"
+                app:isb_indicator_color="@color/colorGray"
+                app:isb_indicator_text_color="@color/colorGreen"
+                app:isb_indicator_text_size="18sp"
+                app:isb_max="10"
+                app:isb_min="1"
+                app:isb_only_thumb_draggable="false"
+                app:isb_progress="5"
+                app:isb_seek_smoothly="true"
+                app:isb_show_indicator="circular_bubble"
+                app:isb_show_tick_marks_type="oval"
+                app:isb_show_tick_texts="true"
+                app:isb_thumb_color="@color/colorGreen"
+                app:isb_thumb_size="20dp"
+                app:isb_tick_marks_color="@color/colorGreen"
+                app:isb_tick_marks_size="8dp"
+                app:isb_tick_texts_color="@color/colorPrimary"
+                app:isb_tick_texts_size="15sp"
+                app:isb_ticks_count="10"
+                app:isb_track_background_color="@color/colorGray"
+                app:isb_track_background_size="2dp"
+                app:isb_track_progress_color="@color/colorGreen"
+                app:isb_track_progress_size="4dp" />
+
+            <TextView
+                android:id="@+id/tv_hardness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seekbar_importance"
+                android:layout_marginLeft="@dimen/indicator_margin"
+                android:layout_marginRight="@dimen/indicator_margin"
+                android:layout_marginStart="@dimen/indicator_margin"
+                android:layout_marginEnd="@dimen/indicator_margin"
+                android:layout_marginTop="@dimen/indicator_margin"
+                android:text="@string/input_fc_hardness" />
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/seekbar_hardness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_hardness"
+                android:layout_marginLeft="@dimen/indicator_margin"
+                android:layout_marginRight="@dimen/indicator_margin"
+                android:layout_marginStart="@dimen/indicator_margin"
+                android:layout_marginEnd="@dimen/indicator_margin"
+                android:layout_marginTop="@dimen/indicator_margin"
+                app:isb_indicator_color="@color/colorGray"
+                app:isb_indicator_text_color="@color/colorGreen"
+                app:isb_indicator_text_size="18sp"
+                app:isb_max="10"
+                app:isb_min="1"
+                app:isb_only_thumb_draggable="false"
+                app:isb_progress="5"
+                app:isb_seek_smoothly="true"
+                app:isb_show_indicator="circular_bubble"
+                app:isb_show_tick_marks_type="oval"
+                app:isb_show_tick_texts="true"
+                app:isb_thumb_color="@color/colorGreen"
+                app:isb_thumb_size="20dp"
+                app:isb_tick_marks_color="@color/colorGreen"
+                app:isb_tick_marks_size="8dp"
+                app:isb_tick_texts_color="@color/colorPrimary"
+                app:isb_tick_texts_size="15sp"
+                app:isb_ticks_count="10"
+                app:isb_track_background_color="@color/colorGray"
+                app:isb_track_background_size="2dp"
+                app:isb_track_progress_color="@color/colorGreen"
+                app:isb_track_progress_size="4dp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_action_edit"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
